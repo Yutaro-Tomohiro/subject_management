@@ -4,6 +4,7 @@ class CreateAssignments < ActiveRecord::Migration[6.0]
       t.string :name, null: false
       t.text :description
       t.references :subject
+      t.boolean :completed, null: false, default: false
       t.datetime :expire_at
 
       t.timestamps

@@ -7,6 +7,7 @@
 # Name               | Type               | Attributes
 # ------------------ | ------------------ | ---------------------------
 # **`id`**           | `integer`          | `not null, primary key`
+# **`completed`**    | `boolean`          | `default(FALSE), not null`
 # **`description`**  | `text`             |
 # **`expire_at`**    | `datetime`         |
 # **`name`**         | `string`           | `not null`

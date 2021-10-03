@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2021_10_02_162836) do
     t.string "name", null: false
     t.text "description"
     t.integer "subject_id"
+    t.boolean "completed", default: false, null: false
     t.datetime "expire_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
