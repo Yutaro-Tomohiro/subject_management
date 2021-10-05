@@ -17,5 +17,10 @@
 class Subject < ApplicationRecord
   has_many :assignments
 
+  enum semester: [:the_first, :the_second, :the_third, :the_fourth]
   validates :name, :required, :semester, :yaer, presence: { message: "%{value} must be given please" }
+
+  scope :required, ->(boolean) { where(required: boolean) }
+  scope :semester, ->(semester) {where(semester: semester) }
+  scope :yaer, ->(yaer) { where(yaer: yaer) }
 end
