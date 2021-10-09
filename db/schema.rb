@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 2021_10_02_162836) do
 
   create_table "subjects", force: :cascade do |t|
     t.string "name", null: false
-    t.integer "yaer", null: false
-    t.string "semester", null: false
+    t.integer "year", null: false
+    t.integer "semester", null: false
     t.boolean "required", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
