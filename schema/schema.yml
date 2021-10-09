@@ -600,10 +600,14 @@ paths:
                   type: boolean
                   default: false
                   description: 必修科目か
+                year:
+                  type: integer
+                  description: 学年
               required:
                 - name
                 - semester
                 - required
+                - year
             examples: {}
           application/xml:
             schema:
@@ -662,7 +666,7 @@ paths:
               type: object
               properties: {}
         description: ''
-      description: 課題作成
+      description: 科目作成
       parameters:
         - schema:
             type: string

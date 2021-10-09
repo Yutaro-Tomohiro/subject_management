@@ -16,5 +16,23 @@ module V1
         each_serializer: V1::SubjectSerializer
       )
     end
+
+    def create
+      subject = Subject.new(subject_params)
+
+      if subject.save
+        render(
+          json: subject,
+          serializer: V1::SubjectSerializer
+        )
+      end
+
+    end
+
+    private
+
+    def subject_params
+      params.require(:subject).permit(:name, :semester, :required, :year)
+    end
   end
 end

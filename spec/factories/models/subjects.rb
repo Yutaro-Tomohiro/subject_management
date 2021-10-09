@@ -10,5 +10,10 @@ FactoryBot.define do
       semester { 'the_second' }
       year { 2 }
     end
+
+    trait :other2 do
+      name { '自然科学論' }
+      required { false }
+    end
   end
 end
